@@ -3,9 +3,9 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id
+package com.valaphee.id
 
-import com.valaphee.tinsel.id.util.KeyUtil
+import com.valaphee.id.util.KeyUtil
 import org.springframework.context.annotation.Bean
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.config.annotation.web.builders.HttpSecurity

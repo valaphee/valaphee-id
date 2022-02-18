@@ -3,4 +3,4 @@
  * All rights reserved.
  */
 
-rootProject.name = "tinsel-id"
+rootProject.name = "valaphee-id"

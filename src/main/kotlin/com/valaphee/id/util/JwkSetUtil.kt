@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id.util
+package com.valaphee.id.util
 
 import com.nimbusds.jose.jwk.KeyUse
 import com.nimbusds.jose.jwk.RSAKey

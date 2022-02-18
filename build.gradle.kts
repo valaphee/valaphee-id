@@ -12,7 +12,7 @@ plugins {
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version "1.6.10"
     id("net.linguica.maven-settings") version "0.5"
-    id("org.springframework.boot") version "2.6.2"
+    id("org.springframework.boot") version "2.6.3"
     kotlin("plugin.jpa") version "1.6.10"
     kotlin("plugin.spring") version "1.6.10"
     signing
@@ -45,8 +45,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.6.2")
-    implementation("com.nimbusds:nimbus-jose-jwt:9.16-preview.1")
+    implementation("org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.6.3")
+    implementation("com.nimbusds:nimbus-jose-jwt:9.19")
 }
 
 tasks {
@@ -72,7 +72,7 @@ tasks {
 
     bootBuildImage {
         builder = "paketobuildpacks/builder:0.0.464-base"
-        imageName = "valaphee/tinsel-id:${project.version}"
+        imageName = "valaphee/valaphee-id:${project.version}"
     }
 
     clean { delete(file("node_modules")) }

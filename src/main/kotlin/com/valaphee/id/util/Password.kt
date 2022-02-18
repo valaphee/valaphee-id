@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id.util
+package com.valaphee.id.util
 
 import org.passay.CharacterRule
 import org.passay.EnglishCharacterData
@@ -27,9 +27,8 @@ import kotlin.reflect.KClass
  */
 @Target(AnnotationTarget.ANNOTATION_CLASS, AnnotationTarget.TYPE, AnnotationTarget.PROPERTY, AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.PROPERTY_GETTER)
 @Retention(AnnotationRetention.RUNTIME)
-@Constraint(validatedBy = [com.valaphee.tinsel.id.util.PasswordValidator::class])
+@Constraint(validatedBy = [com.valaphee.id.util.PasswordValidator::class])
 annotation class Password(
-    val message: String = "{com.valaphee.tinsel.Password.message}",
     val groups: Array<KClass<*>> = [],
     val payload: Array<KClass<out Payload>> = []
 )
@@ -40,7 +39,7 @@ annotation class Password(
 class PasswordValidator : ConstraintValidator<Password, String> {
     private lateinit var validator: PasswordValidator
 
-    override fun initialize(constraintAnnotation: Password?) {
+    override fun initialize(constraintAnnotation: Password) {
         validator = PasswordValidator(
             PropertiesMessageResolver(Properties().apply { ClassPathResource("passay.properties").inputStream.use(::load) }), listOf(
                 LengthRule(8, 64),

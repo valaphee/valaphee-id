@@ -3,11 +3,10 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id.account
+package com.valaphee.id.account
 
-import com.valaphee.tinsel.id.Config
-import com.valaphee.tinsel.id.captcha.CaptchaService
-import com.valaphee.tinsel.id.util.Password
+import com.valaphee.id.Config
+import com.valaphee.id.util.Password
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestParam
@@ -22,7 +21,6 @@ import javax.validation.constraints.Size
 @RestController
 class AccountRestController(
     private val accountService: AccountService,
-    private val captchaService: CaptchaService,
     private val config: Config
 ) {
     @PostMapping("/sign-up")
@@ -45,19 +43,15 @@ class AccountRestController(
  * @author Kevin Ludwig
  */
 data class SignUpForm(
-    @get:Size(message = "{com.valaphee.tinsel.id.Username.message}", min = 5, max = 24)
-    val username: String,
-
-    @get:Email
-    val email: String
+    @get:Size(min = 5, max = 24) val username: String,
+    @get:Email val email: String
 )
 
 /**
  * @author Kevin Ludwig
  */
 data class ChangePasswordForm(
-    @get:Password
-    val password: String
+    @get:Password val password: String
 )
 
 /**

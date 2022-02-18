@@ -3,10 +3,10 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id.account.security
+package com.valaphee.id.account.security
 
 import com.nimbusds.jose.jwk.JWKSet
-import com.valaphee.tinsel.id.util.JwkSetUtil
+import com.valaphee.id.util.JwkSetUtil
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Import

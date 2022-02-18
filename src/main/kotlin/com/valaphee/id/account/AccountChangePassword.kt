@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id.account
+package com.valaphee.id.account
 
 import org.springframework.data.jpa.repository.JpaRepository
 import java.sql.Timestamp
@@ -20,19 +20,10 @@ import javax.persistence.OneToOne
  */
 @Entity
 data class AccountChangePassword(
-    @Column(unique = true, nullable = false)
-    var token: String,
-
-    @Column(nullable = false)
-    var expiresAt: Timestamp,
-
-    @OneToOne
-    @JoinColumn(nullable = false)
-    var account: Account,
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Int? = null
+    @Column(unique = true, nullable = false) var token: String,
+    @Column(nullable = false) var expiresAt: Timestamp,
+    @OneToOne @JoinColumn(nullable = false) var account: Account,
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) var id: Int? = null
 )
 
 /**

@@ -3,9 +3,9 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id.account
+package com.valaphee.id.account
 
-import com.valaphee.tinsel.id.Config
+import com.valaphee.id.Config
 import org.springframework.security.authentication.AnonymousAuthenticationToken
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.stereotype.Controller

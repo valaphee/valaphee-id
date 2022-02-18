@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id.account.security
+package com.valaphee.id.account.security
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint

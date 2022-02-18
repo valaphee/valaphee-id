@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id
+package com.valaphee.id
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry

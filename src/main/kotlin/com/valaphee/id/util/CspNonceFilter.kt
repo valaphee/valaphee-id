@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id.util
+package com.valaphee.id.util
 
 import org.springframework.web.filter.GenericFilterBean
 import java.security.SecureRandom

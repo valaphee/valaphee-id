@@ -3,10 +3,9 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id
+package com.valaphee.id
 
-import com.valaphee.tinsel.Error
-import com.valaphee.tinsel.id.account.DuplicateAuthenticationException
+import com.valaphee.id.account.DuplicateAuthenticationException
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

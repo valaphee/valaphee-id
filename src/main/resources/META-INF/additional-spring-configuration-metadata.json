@@ -1,47 +1,37 @@
 {
   "properties": [
     {
-      "name": "server.ajp.enabled",
-      "type": "java.lang.Boolean",
-      "defaultValue": false
-    },
-    {
-      "name": "server.ajp.port",
-      "type": "java.lang.Integer",
-      "defaultValue": 9090
-    },
-    {
-      "name": "tinsel.id.brand-name",
+      "name": "valaphee-id.brand-name",
       "type": "java.lang.String",
       "defaultValue": "Unknown"
     },
     {
-      "name": "tinsel.id.brand-logo",
+      "name": "valaphee-id.brand-logo",
       "type": "java.lang.String",
       "defaultValue": null
     },
     {
-      "name": "tinsel.id.base-url",
+      "name": "valaphee-id.base-url",
       "type": "java.lang.String",
       "defaultValue": "http://localhost:8080/"
     },
     {
-      "name": "tinsel.id.no-reply-email",
+      "name": "valaphee-id.no-reply-email",
       "type": "java.lang.String",
       "defaultValue": "no-reply@localhost"
     },
     {
-      "name": "tinsel.id.sign-up",
+      "name": "valaphee-id.sign-up",
       "type": "java.lang.Boolean",
       "defaultValue": true
     },
     {
-      "name": "tinsel.id.change-password-expires-in",
+      "name": "valaphee-id.change-password-expires-in",
       "type": "java.lang.Long",
       "defaultValue": 1800000
     },
     {
-      "name": "tinsel.id.landing-url",
+      "name": "valaphee-id.landing-url",
       "type": "java.lang.String",
       "defaultValue": "http://localhost:8080/"
     }

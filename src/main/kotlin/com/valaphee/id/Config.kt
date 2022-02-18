@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id
+package com.valaphee.id
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.context.properties.ConstructorBinding
@@ -12,7 +12,7 @@ import org.springframework.boot.context.properties.ConstructorBinding
  * @author Kevin Ludwig
  */
 @ConstructorBinding
-@ConfigurationProperties("tinsel.id")
+@ConfigurationProperties("valaphee.id")
 class Config(
     var brandName: String = "Unknown",
     var brandLogo: String? = null,

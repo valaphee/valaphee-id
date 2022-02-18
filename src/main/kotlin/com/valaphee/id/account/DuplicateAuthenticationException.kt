@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id.account
+package com.valaphee.id.account
 
 import org.springframework.security.core.AuthenticationException
 

@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id.account
+package com.valaphee.id.account
 
 import org.springframework.data.jpa.repository.JpaRepository
 import javax.persistence.Column
@@ -17,21 +17,11 @@ import javax.persistence.Id
  */
 @Entity
 data class Account(
-    @Column(unique = true, nullable = false)
-    var username: String,
-
-    @Column(unique = true, nullable = false)
-    var email: String,
-
-    @Column
-    var password: String? = null,
-
-    @Column
-    var roles: String? = null,
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Int? = null
+    @Column(unique = true, nullable = false) var username: String,
+    @Column(unique = true, nullable = false) var email: String,
+    @Column var password: String? = null,
+    @Column var roles: String? = null,
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) var id: Int? = null
 )
 
 /**

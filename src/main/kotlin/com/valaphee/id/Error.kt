@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel
+package com.valaphee.id
 
 /**
  * @author Kevin Ludwig

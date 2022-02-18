@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id.account.security
+package com.valaphee.id.account.security
 
 import com.nimbusds.jose.jwk.JWKSet
 import org.springframework.security.jwt.JwtHelper

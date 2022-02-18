@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.valaphee.tinsel.id.util
+package com.valaphee.id.util
 
 import java.security.KeyPair
 import java.security.KeyPairGenerator
