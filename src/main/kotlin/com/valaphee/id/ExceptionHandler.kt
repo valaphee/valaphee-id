@@ -23,7 +23,7 @@ class ExceptionHandler : ResponseEntityExceptionHandler() {
     override fun handleMethodArgumentNotValid(ex: MethodArgumentNotValidException, headers: HttpHeaders, status: HttpStatus, request: WebRequest): ResponseEntity<Any> {
         val violations = mutableMapOf<String, String>()
         ex.bindingResult.fieldErrors.forEach { violation -> violations.compute(violation.field) { _, value -> value?.let { it + ",${violation.defaultMessage}" } ?: violation.defaultMessage } }
-        return ResponseEntity(Error("Validation Failed", violations.values.joinToString(",")), HttpStatus.BAD_REQUEST)
+        return ResponseEntity(Error("Validation failed.", violations.values.joinToString(",")), HttpStatus.BAD_REQUEST)
     }
 
     @ExceptionHandler

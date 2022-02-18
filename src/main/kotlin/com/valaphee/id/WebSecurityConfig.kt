@@ -17,7 +17,6 @@ import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder
 import org.springframework.security.crypto.scrypt.SCryptPasswordEncoder
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher
-import java.security.KeyPair
 
 /**
  * @author Kevin Ludwig
@@ -39,11 +38,13 @@ class WebSecurityConfig : WebSecurityConfigurerAdapter() {
     }
 
     @Bean
-    fun keyPair(): KeyPair = KeyUtil.generateRsaKey()
+    fun keyPair() = KeyUtil.generateRsaKey()
 
     @Bean
-    fun passwordEncoder(): PasswordEncoder = DelegatingPasswordEncoder("pbkdf2", mutableMapOf(
-        "pbkdf2" to Pbkdf2PasswordEncoder().apply { setAlgorithm(Pbkdf2PasswordEncoder.SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA512) },
-        "scrypt" to SCryptPasswordEncoder()
-    ))
+    fun passwordEncoder(): PasswordEncoder = DelegatingPasswordEncoder(
+        "pbkdf2", mapOf(
+            "pbkdf2" to Pbkdf2PasswordEncoder().apply { setAlgorithm(Pbkdf2PasswordEncoder.SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA512) },
+            "scrypt" to SCryptPasswordEncoder()
+        )
+    )
 }

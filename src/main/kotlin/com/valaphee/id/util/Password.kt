@@ -29,6 +29,7 @@ import kotlin.reflect.KClass
 @Retention(AnnotationRetention.RUNTIME)
 @Constraint(validatedBy = [com.valaphee.id.util.PasswordValidator::class])
 annotation class Password(
+    val message: String = "Password is invalid.",
     val groups: Array<KClass<*>> = [],
     val payload: Array<KClass<out Payload>> = []
 )
