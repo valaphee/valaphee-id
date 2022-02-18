@@ -1,0 +1,9 @@
+/*!
+ * Copyright (c) 2021-2022, GrieferGames, Valaphee.
+ * All rights reserved.
+ */
+
+.navbar-themed {
+  @extend .bg-dark;
+  @extend .navbar-dark;
+}

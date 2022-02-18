@@ -1,0 +1,29 @@
+/*!
+ * Copyright (c) 2021-2022, GrieferGames, Valaphee.
+ * All rights reserved.
+ */
+
+@mixin dark-table-row-variant($state, $background) {
+  .table-#{$state} {
+    &,
+    > th,
+    > td {
+      color: color-yiq($background);
+    }
+  }
+
+  .table-hover {
+    $hover-background: darken($background, 5%);
+
+    .table-#{$state} {
+      @include hover {
+        color: color-yiq($hover-background);
+
+        > td,
+        > th {
+          color: color-yiq($hover-background);
+        }
+      }
+    }
+  }
+}

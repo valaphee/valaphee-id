@@ -1,0 +1,93 @@
+<!--
+  ~ Copyright (c) 2021-2022, GrieferGames, Valaphee.
+  ~ All rights reserved.
+  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="194x194" href="favicon-194x194.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+  <link rel="manifest" href="site.webmanifest"/>
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#0593ff"/>
+  <meta name="msapplication-TileColor" content="#0593ff"/>
+  <meta name="theme-color" content="#0593ff"/>
+  <style>
+    @import "assets/font-vt323/stylesheet.css";
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+      color: #e0e2f4;
+    }
+
+    body,
+    p {
+      font: normal 20px/1.25rem VT323, monospace;
+    }
+
+    h1 {
+      font: normal 2.75rem/1.05em VT323, monospace;
+    }
+
+    h2 {
+      font: normal 2.25rem/1.25em VT323, monospace;
+    }
+
+    h3 {
+      font: lighter 1.5rem/1.25em VT323, monospace;
+    }
+
+    h4 {
+      font: lighter 1.125rem/1.2222222em VT323, monospace;
+    }
+
+    body {
+      background: #0414a7;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      max-width: 640px;
+    }
+
+    .bsod {
+      padding-top: 10%;
+    }
+
+    .bsod .neg {
+      text-align: center;
+      color: #0414a7;
+    }
+
+    .bsod .neg .bg {
+      background: #aaaaaa;
+      padding: 0 15px 2px 13px;
+    }
+
+    .bsod .title {
+      margin-bottom: 50px;
+    }
+  </style>
+  <title>OAuth Error</title>
+</head>
+<body>
+<main class="bsod container">
+  <h1 class="neg title"><span class="bg">OAuth Error</span></h1>
+  <p>An error has occurred, to continue:</p>
+  <p>* Return to our homepage.<br />* Send us an e-mail about this error and try later.</p>
+  <p>[[${error}]]</p>
+</main>
+</body>
+</html>

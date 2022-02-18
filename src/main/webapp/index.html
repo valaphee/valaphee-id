@@ -1,0 +1,34 @@
+<!--
+  ~ Copyright (c) 2021-2022, GrieferGames, Valaphee.
+  ~ All rights reserved.
+  -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <base href="/"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="194x194" href="favicon-194x194.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+  <link rel="manifest" href="site.webmanifest"/>
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#0593ff"/>
+  <meta name="msapplication-TileColor" content="#0593ff"/>
+  <meta name="theme-color" content="#0593ff"/>
+  <title th:text="${@environment.getProperty('tinsel.id.name')}"></title>
+  <script th:inline="javascript">
+/*<![CDATA[*/
+const baseUrl = new URL(document.head.baseURI).pathname
+const config = { brandName: /*[[${@environment.getProperty('tinsel.id.brand-name')}]]*/ "", brandLogo: /*[[${@environment.getProperty('tinsel.id.brand-logo')}]]*/ "", baseUrl: baseUrl.substring(0, baseUrl.length), signUp: /*[[${@environment.getProperty('tinsel.id.sign-up')}]]*/ false }
+/*]]>*/
+  </script>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+</body>
+</html>
