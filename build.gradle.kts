@@ -23,10 +23,7 @@ val versionDetails: groovy.lang.Closure<com.palantir.gradle.gitversion.VersionDe
 val details = versionDetails()
 version = "${details.lastTag}.${details.commitDistance}"
 
-repositories {
-    mavenCentral()
-    mavenLocal()
-}
+repositories { mavenCentral() }
 
 dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-afterburner")
@@ -37,7 +34,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.passay:passay:1.6.1")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
-    if (!project.hasProperty("production")) implementation("org.springframework.boot:spring-boot-devtools")
+    if (project.hasProperty("development")) implementation("org.springframework.boot:spring-boot-devtools")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-mail")
     implementation("org.springframework.boot:spring-boot-starter-security")
@@ -63,7 +60,7 @@ tasks {
         dependsOn("npmInstall")
         script.set(project.file("node_modules/webpack/bin/webpack.js"))
         args.set(listOf(
-            "--config", "webpack.${if (project.hasProperty("production")) "production" else "development"}.js",
+            "--config", "webpack${if (project.hasProperty("development")) ".development" else ""}.js",
             "-o", "./src/main/resources/static"
         ))
     }
