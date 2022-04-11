@@ -11,7 +11,6 @@ import org.passay.EnglishSequenceData
 import org.passay.IllegalSequenceRule
 import org.passay.LengthRule
 import org.passay.PasswordData
-import org.passay.PasswordValidator
 import org.passay.PropertiesMessageResolver
 import org.passay.WhitespaceRule
 import org.springframework.core.io.ClassPathResource
@@ -27,7 +26,7 @@ import kotlin.reflect.KClass
  */
 @Target(AnnotationTarget.ANNOTATION_CLASS, AnnotationTarget.TYPE, AnnotationTarget.PROPERTY, AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.PROPERTY_GETTER)
 @Retention(AnnotationRetention.RUNTIME)
-@Constraint(validatedBy = [com.valaphee.id.util.PasswordValidator::class])
+@Constraint(validatedBy = [PasswordValidator::class])
 annotation class Password(
     val message: String = "Password is invalid.",
     val groups: Array<KClass<*>> = [],
@@ -38,10 +37,10 @@ annotation class Password(
  * @author Kevin Ludwig
  */
 class PasswordValidator : ConstraintValidator<Password, String> {
-    private lateinit var validator: PasswordValidator
+    private lateinit var validator: org.passay.PasswordValidator
 
     override fun initialize(constraintAnnotation: Password) {
-        validator = PasswordValidator(
+        validator = org.passay.PasswordValidator(
             PropertiesMessageResolver(Properties().apply { ClassPathResource("passay.properties").inputStream.use(::load) }), listOf(
                 LengthRule(8, 64),
                 CharacterRule(EnglishCharacterData.UpperCase, 1),
