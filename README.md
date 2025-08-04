@@ -1,0 +1,22 @@
+"Env": [
+  "spring.datasource.url=jdbc:mysql://mysql:3306/id",
+  "spring.datasource.username=username",
+  "spring.datasource.password=password",
+  "spring.mail.host=",
+  "spring.mail.port=587",
+  "spring.mail.username=",
+  "spring.mail.password=",
+  "spring.mail.properties.mail.smtp.auth=true",
+  "spring.mail.properties.mail.smtp.starttls.enable=true",
+  "spring.mvc.pathmatch.matching-strategy=ANT_PATH_MATCHER",
+  "valaphee-id.brand-name=Valaphee",
+  "valaphee.id.brandName=Valaphee",
+  "valaphee.id.baseUrl=https://id.valaphee.com/",
+  "valaphee.id.landingUrl=https://valaphee.com/",
+  "valaphee.id.noReplyEmail=no-reply@valaphee.com",
+  "PATH=/cnb/process:/cnb/lifecycle:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+  "CNB_LAYERS_DIR=/layers",
+  "CNB_APP_DIR=/workspace",
+  "CNB_PLATFORM_API=0.4",
+  "CNB_DEPRECATION_MODE=quiet"
+]
