@@ -1,3 +1,4 @@
+```json
 "Env": [
   "spring.datasource.url=jdbc:mysql://mysql:3306/id",
   "spring.datasource.username=username",
@@ -20,3 +21,4 @@
   "CNB_PLATFORM_API=0.4",
   "CNB_DEPRECATION_MODE=quiet"
 ]
+```
